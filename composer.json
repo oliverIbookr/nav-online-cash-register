@@ -1,5 +1,5 @@
 {
-  "name": "vasadibt/nav-online-cash-register",
+  "name": "oliveribookr/nav-online-cash-register",
   "description": "A PHP interface for Online Cash Register Data Reporting of Hungarian Tax Office (NAV)",
   "license": "MIT",
   "require": {
