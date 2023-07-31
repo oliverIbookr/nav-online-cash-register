@@ -11,6 +11,7 @@ use NavOnlineCashRegister\Models\Config;
 use NavOnlineCashRegister\Models\Debug;
 use NavOnlineCashRegister\Request\GenerateCashRegisterTestDataRequestXml;
 use NavOnlineCashRegister\Request\QueryCashRegisterFileRequestXml;
+use NavOnlineCashRegister\Request\QueryCashRegistersRequestXml;
 use NavOnlineCashRegister\Request\QueryCashRegisterStatusRequestXml;
 use NavOnlineCashRegister\Request\Request;
 use NavOnlineCashRegister\Response\CashRegisterFileResponse;
@@ -179,6 +180,20 @@ class Client extends AbstractModel
     {
         return CashRegisterStatusResponse::createFromResponse(
             $this->post(new QueryCashRegisterStatusRequestXml(compact('APNumberList')))
+        );
+    }
+
+    /**
+     * @param array $APNumberList
+     *
+     * @return CashRegisterStatusResponse
+     *
+     * @throws BaseException
+     */
+    public function queryCashRegisters()
+    {
+        return CashRegisterStatusResponse::createFromResponse(
+            $this->post(new QueryCashRegistersRequestXml())
         );
     }
 
