@@ -183,6 +183,20 @@ class Client extends AbstractModel
     }
 
     /**
+     * @param array $APNumberList
+     *
+     * @return CashRegisterStatusResponse
+     *
+     * @throws BaseException
+     */
+    public function queryCashRegisters()
+    {
+        return CashRegisterStatusResponse::createFromResponse(
+            $this->post(new QueryCashRegisterStatusRequestXml())
+        );
+    }
+
+    /**
      * @param string $APNumber
      * @param int $fileNumberStart
      * @param int $fileNumberEnd
