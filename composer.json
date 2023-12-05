@@ -3,14 +3,14 @@
   "description": "A PHP interface for Online Cash Register Data Reporting of Hungarian Tax Office (NAV)",
   "license": "MIT",
   "require": {
-    "php": "^7.4|^8.0|^8.1",
+    "php": "^7.4|^8.0|^8.1|^8.2",
     "ext-curl": "*",
     "ext-dom": "*",
     "ext-libxml": "*",
     "ext-openssl": "*",
     "ext-simplexml": "*",
     "ext-zip": "*",
-    "guzzlehttp/guzzle": "7.4"
+    "guzzlehttp/guzzle": "7.8"
   },
   "autoload": {
     "psr-4": {
